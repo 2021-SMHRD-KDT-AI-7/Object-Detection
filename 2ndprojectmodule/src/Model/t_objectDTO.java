@@ -22,6 +22,15 @@ public class t_objectDTO {
 		this.item_name = item_name;
 		this.item_cnt = item_cnt;
 	}
+	
+	
+
+
+	public t_objectDTO(String item_name, int item_cnt) {
+		super();
+		this.item_name = item_name;
+		this.item_cnt = item_cnt;
+	}
 
 
 	public int getItem_seq() {

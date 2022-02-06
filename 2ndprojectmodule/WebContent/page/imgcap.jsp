@@ -1,137 +1,147 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Charts - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    </head>
-    <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- ∏ﬁ¿Œ ∏ﬁ¥∫πŸ-->
-            <a class="navbar-brand ps-3" href="index.html">∏µ® ¿Ã∏ß ¿˚¥¬∞˜</a>
-            <!-- ªÁ¿ÃµÂ ∏ﬁ¥∫πŸ-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            <!-- »∏ø¯ ¡§∫∏ ∏ﬁ¥∫-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <!-- »∏ø¯ ºº∆√ -->
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <!-- ∑Œ±◊? π∫¡ˆ∏∏ß -->
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <!-- ¡Ÿ≥™¥©±‚ -->
-                        <li><hr class="dropdown-divider" /></li>
-                        <!-- ∑Œ±◊æ∆øÙ -->
-                        <li><a class="dropdown-item" href="../LogoutServiceCon">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <!-- ªÁ¿ÃµÂπŸ ∏ﬁ¥∫-->
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <!-- core 1π¯ ªÁ¿ÃµÂ -->
-                            <div class="sb-sidenav-menu-heading">core</div>
-                            <a class="nav-link" href="Main.jsp">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                æÓµÂπŒ ∆‰¿Ã¡ˆ ¿Ãµø
-                            </a>
-                            <!-- interface 1π¯ ªÁ¿ÃµÂ -->
-                            <div class="sb-sidenav-menu-heading">interface</div>
-                            <a class="nav-link" href="imgcap.jsp">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                ¿˝µµ ¿ÃπÃ¡ˆ ∫∏±‚
-                            </a>
-                            <!-- interface 2π¯ ªÁ¿ÃµÂ -->
-                            <a class="nav-link" href="tables.jsp">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                ¿˝µµ π∞«∞ »Æ¿Œ
-                            </a>
-                            <!-- interface 3π¯ ªÁ¿ÃµÂ -->
-                            <a class="nav-link" href="cctv.jsp">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                CCVT∫∏±‚
-                            </a>
-
-                        </div>
-                    </div>
-                    <!-- ªÁ¿ÃµÂπŸ «œ¥‹-->
-                    <div class="sb-sidenav-footer">
-                        <div class="small">¡°∆˜ ∏Ì</div>
-                        "¡°∆˜∏Ì ¿˚±‚"
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <!-- ¬˜∆Æ ∏ﬁ¿Œ ∆‰¿Ã¡ˆ Ω√¿€-->
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Charts</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item"><a href="Main.jsp">æÓµÂπŒ ∆‰¿Ã¡ˆ</a></li>
-                            <li class="breadcrumb-item active">¿˝µµ«‡¿ß/æÛ±º¿ÃπÃ¡ˆ ∫∏±‚</li>
-                        </ol>
-                        <!-- ¬˜∆Æ «•1 -->
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-area me-1"></i>
-                                ¿˝µµ «‡¿ß ƒ∏√≥
-                            </div>
-                            <!-- ¿ÃπÃ¡ˆ ∫“∑Øø¿±‚ -->
-                            <table class="v4">
-                                <tr>
-                                    <td><img class="cctv" src="./assets/img/noimg.jpg"></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-chart-area me-1"></i>
-                                ¿˝µµπ¸ æÛ±º ƒ∏√≥
-                            </div>
-                            <!-- ¿ÃπÃ¡ˆ ∫“∑Øø¿±‚ -->
-                            <table class="v4">
-                                <tr>
-                                    <td><img class="cctv" src="./assets/img/noimg.jpg"></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </main>
-                <!-- «œ¥‹ ∏ﬁ¥∫?-->
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-       <!-- <script src="assets/demo/chart-area-demo.js"></script>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Charts - SB Admin</title>
+<link href="css/styles.css" rel="stylesheet" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+	crossorigin="anonymous"></script>
+</head>
+<body class="sb-nav-fixed">
+	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+		<!-- Î©îÏù∏ Î©îÎâ¥Î∞î-->
+		<a class="navbar-brand ps-3" href="index.html">Î™®Îç∏ Ïù¥Î¶Ñ Ï†ÅÎäîÍ≥≥</a>
+		<!-- ÏÇ¨Ïù¥Îìú Î©îÎâ¥Î∞î-->
+		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
+			id="sidebarToggle" href="#!">
+			<i class="fas fa-bars"></i>
+		</button>
+		<!-- ÌöåÏõê Ï†ïÎ≥¥ Î©îÎâ¥-->
+		<ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+			<li class="nav-item dropdown"><a
+				class="nav-link dropdown-toggle" id="navbarDropdown" href="#"
+				role="button" data-bs-toggle="dropdown" aria-expanded="false"><i
+					class="fas fa-user fa-fw"></i></a>
+				<ul class="dropdown-menu dropdown-menu-end"
+					aria-labelledby="navbarDropdown">
+					<!-- ÌöåÏõê ÏÑ∏ÌåÖ -->
+					<li><a class="dropdown-item" href="#!">Settings</a></li>
+					<!-- Î°úÍ∑∏? Î≠îÏßÄÎ™®Î¶Ñ -->
+					<li><a class="dropdown-item" href="#!">Activity Log</a></li>
+					<!-- Ï§ÑÎÇòÎàÑÍ∏∞ -->
+					<li><hr class="dropdown-divider" /></li>
+					<!-- Î°úÍ∑∏ÏïÑÏõÉ -->
+					<li><a class="dropdown-item" href="../LogoutServiceCon">Logout</a></li>
+				</ul></li>
+		</ul>
+	</nav>
+	<!-- ÏÇ¨Ïù¥ÎìúÎ∞î Î©îÎâ¥-->
+	<div id="layoutSidenav">
+		<div id="layoutSidenav_nav">
+			<nav class="sb-sidenav accordion sb-sidenav-dark"
+				id="sidenavAccordion">
+				<div class="sb-sidenav-menu">
+					<div class="nav">
+						<!-- core 1Î≤à ÏÇ¨Ïù¥Îìú -->
+						<div class="sb-sidenav-menu-heading">core</div>
+						<a class="nav-link" href="Main.jsp">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-tachometer-alt"></i>
+							</div> Ï†ÑÏ≤¥ Í∞ÑÎûµ Î≥¥Í∏∞
+						</a>
+						<!-- interface 1Î≤à ÏÇ¨Ïù¥Îìú -->
+						<div class="sb-sidenav-menu-heading">interface</div>
+						<a class="nav-link" href="imgcap.jsp">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-chart-area"></i>
+							</div> Ï†àÎèÑ Ïù¥ÎØ∏ÏßÄ Î≥¥Í∏∞
+						</a>
+						<!-- interface 2Î≤à ÏÇ¨Ïù¥Îìú -->
+						<a class="nav-link" href="tables.jsp">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-table"></i>
+							</div> Ï†àÎèÑ Î¨ºÌíà ÌôïÏù∏
+						</a>
+						<!-- interface 3Î≤à ÏÇ¨Ïù¥Îìú -->
+						<a class="nav-link" href="cctv.jsp">
+							<div class="sb-nav-link-icon">
+								<i class="fas fa-table"></i>
+							</div> CCVTÎ≥¥Í∏∞
+						</a>
+					</div>
+				</div>
+				<!-- ÏÇ¨Ïù¥ÎìúÎ∞î ÌïòÎã®-->
+				<div class="sb-sidenav-footer">
+					<div class="small">Ïä§ÎßàÌä∏ Ïù∏Ïû¨Í∞úÎ∞úÏõêÏ†ê</div>
+				</div>
+			</nav>
+		</div>
+		<div id="layoutSidenav_content">
+			<div id="layoutSidenav_content">
+				<main>
+					<!-- Ï∞®Ìä∏ Î©îÏù∏ ÌéòÏù¥ÏßÄ ÏãúÏûë-->
+					<div class="container-fluid px-4">
+						<h1 class="mt-4">Ïù¥ÎØ∏ÏßÄ Ï∫°Ï≤ò</h1>
+						<ol class="breadcrumb mb-4">
+							<li class="breadcrumb-item"><a href="Main.jsp">Ï†ÑÏ≤¥ Í∞ÑÎûµ Î≥¥Í∏∞</a></li>
+							<li class="breadcrumb-item active">Ï†àÎèÑÌñâÏúÑ/ÏñºÍµ¥Ïù¥ÎØ∏ÏßÄ Î≥¥Í∏∞</li>
+						</ol>
+						<!-- Ï∞®Ìä∏ Ìëú1 -->
+						<div class="card mb-4">
+							<div class="card-header">
+								<i class="fas fa-chart-area me-1"></i> Ï†àÎèÑ ÌñâÏúÑ Ï∫°Ï≤ò
+							</div>
+							<!-- Ïù¥ÎØ∏ÏßÄ Î∂àÎü¨Ïò§Í∏∞ -->
+							<div class="imgcen">
+								<img class="imgsize1" src="./assets/img/juldo.jpg">
+							</div>
+						</div>
+						<div class="card mb-4">
+							<div class="card-header">
+								<i class="fas fa-chart-area me-1"></i> Ï†àÎèÑÎ≤î ÏñºÍµ¥ Ï∫°Ï≤ò
+							</div>
+							<!-- Ïù¥ÎØ∏ÏßÄ Î∂àÎü¨Ïò§Í∏∞ -->
+							<div class="imgcen">
+								<img class="imgsize1" src="./assets/img/aaa.jpg">
+							</div>
+						</div>
+					</div>
+				</main>
+				<!-- ÌïòÎã® Î©îÎâ¥?-->
+				<footer class="py-4 bg-light mt-auto">
+					<div class="container-fluid px-4">
+						<div
+							class="d-flex align-items-center justify-content-between small">
+							<div class="text-muted">Copyright &copy; Your Website 2021</div>
+							<div>
+								<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
+									&amp; Conditions</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+			crossorigin="anonymous"></script>
+		<!-- <script src="assets/demo/chart-area-demo.js"></script>
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="assets/demo/chart-pie-demo.js"></script> -->
-    </body>
-    <script>
+</body>
+<script>
     
     </script>
 </html>

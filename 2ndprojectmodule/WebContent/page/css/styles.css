@@ -75,6 +75,10 @@
     scroll-behavior: smooth;
   }
 }
+@media all and (min-width:768px) {
+    사용자 해상도가 768px 이상일 때 이 코드가 실행됨. 테블릿과 데스크톱의 공통 코드를 작성한다.
+    
+}
 
 body {
   margin: 0;
@@ -1588,6 +1592,16 @@ progress {
   .col-xl-3 {
     flex: 0 0 auto;
     width: 25%;
+  }
+  
+  .col-xl-3-frame {
+    flex: 0 0 auto;
+    width: 70%;
+  }
+  
+  .col-xl-3-frame30 {
+    flex: 0 0 auto;
+    width: 30%;
   }
 
   .col-xl-4 {
@@ -11702,11 +11716,22 @@ body {
 
 .cctv {
   width:75%;
-  align-items: center;
-  margin-top: -2px;
-  margin-bottom: -7px;
+  height:50%;
 }
 
+.imgsize{
+	width: 70%;
+	height: 500px;
+}
+
+.imgsize1{
+	width: 50%;
+	height: 50%;
+}
+
+.imgcen{
+	text-align: center;
+}
 .testcctv{
   width:75%;
   float:right;
@@ -11717,14 +11742,34 @@ body {
 .testcctv1{
   width:75%;
   float:left;
+  align-items: center;
+}
+
+.cctvadmin{
+	width: 100%;
 }
 
 .testcctv2{
   width:75%;
   float:right;
+  align-items: center;
 }
 
+.admincctv1{
+  width:50%;
+  text-align: center;
+  align-items: center;
+  top: 50%;
+}
 
+iframe{
+	width: 100%;
+	height: 100%;
+}
+
+.frame{
+	height: 300px;s
+}
 
 .v4 {
   position: relative;
@@ -11732,7 +11777,8 @@ body {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
+  background-color: #fff;
   background-clip: border-box;
-  border: -1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
 }

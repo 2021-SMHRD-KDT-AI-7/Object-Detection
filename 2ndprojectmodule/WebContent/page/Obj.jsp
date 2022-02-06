@@ -173,7 +173,7 @@ String user_shop = (String) session.getAttribute("user_shop");
 						<div class="container-fluid px-4">
 							<div class="card mb-4">
 								<div class="card-header">
-									<i class="me-1"></i> 통합 / 개별 영상
+									<i class="me-1"></i> 객체 탐지
 								</div>
 								<div class="row">
 									<!-- 1번 영상-->
@@ -181,13 +181,6 @@ String user_shop = (String) session.getAttribute("user_shop");
 										<form class="cctvadmin">
 											<iframe class="frame"
 												src="http://121.147.0.176:2000/"></iframe>
-										</form>
-									</div>
-									<!-- 2번 영상-->
-									<div class="col-xl-3-frame30 col-md-6">
-										<form class="cctvadmin">
-											<iframe class="frame"
-												src="http://222.102.104.28:2000/video_feed"></iframe>
 										</form>
 									</div>
 								</div>

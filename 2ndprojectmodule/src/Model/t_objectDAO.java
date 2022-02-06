@@ -48,7 +48,7 @@ public class t_objectDAO {
 	}
 
 	// 물품 보여주기
-	public ArrayList obj_show(int item_seq) {
+	public ArrayList<t_objectDTO> obj_show() {
 		ArrayList<t_objectDTO> o_list = new ArrayList<t_objectDTO>();
 		getConn();
 		try {
@@ -58,11 +58,10 @@ public class t_objectDAO {
 			rs = psmt.executeQuery();
 
 			while (rs.next()) {
-				int detection_seq = rs.getInt("detection_seq");
 				String item_name = rs.getString("item_name");
 				int item_cnt = rs.getInt("item_cnt");
-
-				dto = new t_objectDTO(detection_seq, item_name, item_cnt);
+				
+				dto = new t_objectDTO(item_name, item_cnt);
 				o_list.add(dto);
 			}
 

@@ -8,7 +8,7 @@ CREATE TABLE t2_object
 )
 /
 
-select * from t2_detection;
+select * from t2_object;
 
 CREATE SEQUENCE t2_object_SEQ
 START WITH 1
@@ -30,4 +30,5 @@ ALTER TABLE t2_object
         REFERENCES t2_detection (detection_seq)
 /
 
-INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (1, 'item_name 1', 1);
+INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (1, '≤≠', 2);
+INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (2, 'ªÁ≈¡', 3);
