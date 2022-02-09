@@ -129,7 +129,7 @@
 								</div>
 								<div class="col-xl-3-cctv1 col-md-6">
 									<div>
-										<video class='cctv' src='./video/10sec.mp4' controls></video>
+										<video class='cctv' src='./video/tonghab.mp4' controls></video>
 										<input class="testcctv1" type="file" name="cctv4">
 										<button class='testcctv1' type="button" id="uploadcctv4">CCTV4</button>
 									</div>
