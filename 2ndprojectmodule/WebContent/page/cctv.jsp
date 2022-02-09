@@ -103,42 +103,38 @@
 								<i class="fas fa-chart-area me-1"></i> CCTV보기
 							</div>
 							<!-- 영상 불러오기 -->
-							<table class="v4">
-								<tr>
-									<td>
-										<form id="cctv1">
-											<video class='testcctv' src='./video/testvideo.mp4' controls
-												enctype=multipart/form-data></video>
-											<input class="testcctv2" type="file" name="cctv1">
-											<button class='testcctv2' type="button" id="uploadcctv1">CCTV1</button>
-										</form>
-									</td>
-									<td>
-										<form id="cctv2">
-											<video class='cctv' src='./video/testvideo.mp4' controls></video>
-											<input class="testcctv1" type="file" name="cctv2">
-											<button class='testcctv1' type="button" id="uploadcctv2">CCTV2</button>
-										</form>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<form id="cctv3">
-											<video class='testcctv' src='./video/testvideo.mp4' controls
-												enctype=multipart/form-data></video>
-											<input class="testcctv2" type="file" name="cctv3">
-											<button class='testcctv2' type="button" id="uploadcctv1">CCTV3</button>
-										</form>
-									</td>
-									<td>
-										<form id="cctv4">
-											<video class='cctv' src='./video/testvideo.mp4' controls></video>
-											<input class="testcctv1" type="file" name="cctv4">
-											<button class='testcctv1' type="button" id="uploadcctv2">CCTV4</button>
-										</form>
-									</td>
-								</tr>
-							</table>
+							<div class="row">
+								<div class="col-xl-3-cctv1 col-md-6">
+									<div>
+										<video class='cctv' src='./video/1.mp4' controls></video>
+										<input class="testcctv1" type="file" name="cctv1">
+										<button class='testcctv1' type="button" id="uploadcctv1">CCTV1</button>
+									</div>
+								</div>
+								<div class="col-xl-3-cctv1 col-md-6">
+									<div>
+										<video class='cctv' src='./video/2.mp4' controls></video>
+										<input class="testcctv1" type="file" name="cctv2">
+										<button class='testcctv1' type="button" id="uploadcctv2">CCTV2</button>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xl-3-cctv1 col-md-6">
+									<div>
+										<video class='cctv' src='./video/3.mp4' controls></video>
+										<input class="testcctv1" type="file" name="cctv3">
+										<button class='testcctv1' type="button" id="uploadcctv3">CCTV3</button>
+									</div>
+								</div>
+								<div class="col-xl-3-cctv1 col-md-6">
+									<div>
+										<video class='cctv' src='./video/10sec.mp4' controls></video>
+										<input class="testcctv1" type="file" name="cctv4">
+										<button class='testcctv1' type="button" id="uploadcctv4">CCTV4</button>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</main>
@@ -168,39 +164,8 @@
 			crossorigin="anonymous"></script>
 </body>
 <script>
-	
 	$(function() {
-		$('#uploadcctv1').on('click', function() {
-
-			console.log($(this).parent());
-
-			var $parent = $(this).parent().parent();
-			var form = $('#cctv1')[0];
-			var formData = new FormData(form);
-			var url = 'http://59.0.236.2:2000/cctv1Upload';
-
-			$.ajax({
-				url : url,
-				type : 'post',
-				data : formData,
-				contentType : false,
-				processData : false,
-				success : function(data) {
-					alert("전송성공");
-					console.log(data);
-					//$parent.empty();
-					//$parent.html("<video class='testcctv' src='../video/"+data.fileName+"' controls/>");  
-				},
-				error : function() {
-					alert("전송실패");
-				}
-			});
-
-		});
-	});
-
-	$(function() {
-		$('#uploadcctv2')
+		$('#uploadcctv1')
 				.on(
 						'click',
 						function() {
@@ -208,7 +173,7 @@
 							console.log($(this).parent());
 
 							var $parent = $(this).parent().parent();
-							var form = $('#cctv2')[0];
+							var form = $('#cctv1')[0];
 							var formData = new FormData(form);
 							var url = '../FileUpload';
 
@@ -217,45 +182,10 @@
 										url : url,
 										type : 'post',
 										data : formData,
-										dataType : 'json',
 										contentType : false,
 										processData : false,
 										success : function(data) {
-											console.log(data);
-											$parent.empty();
-											$parent
-													.html("<video class='cctv' src='../video/"+data.fileName+"' controls/>");
-										},
-										error : function() {
-											alert("전송실패");
-										}
-									});
-
-						});
-	});
-
-	$(function() {
-		$('#uploadcctv3')
-				.on(
-						'click',
-						function() {
-
-							console.log($(this).parent());
-
-							var $parent = $(this).parent().parent();
-							var form = $('#cctv3')[0];
-							var formData = new FormData(form);
-							var url = '../FileUpload';
-
-							$
-									.ajax({
-										url : url,
-										type : 'post',
-										data : formData,
-										dataType : 'json',
-										contentType : false,
-										processData : false,
-										success : function(data) {
+											alert("전송성공");
 											console.log(data);
 											$parent.empty();
 											$parent
@@ -270,7 +200,7 @@
 	});
 
 	$(function() {
-		$('#uploadcctv4')
+		$('#uploadcctv1')
 				.on(
 						'click',
 						function() {
@@ -278,7 +208,7 @@
 							console.log($(this).parent());
 
 							var $parent = $(this).parent().parent();
-							var form = $('#cctv4')[0];
+							var form = $('#cctv1')[0];
 							var formData = new FormData(form);
 							var url = '../FileUpload';
 
@@ -287,14 +217,14 @@
 										url : url,
 										type : 'post',
 										data : formData,
-										dataType : 'json',
 										contentType : false,
 										processData : false,
 										success : function(data) {
+											alert("전송성공");
 											console.log(data);
 											$parent.empty();
 											$parent
-													.html("<video class='cctv' src='../video/"+data.fileName+"' controls/>");
+													.html("<video class='testcctv' src='../video/"+data.fileName+"' controls/>");
 										},
 										error : function() {
 											alert("전송실패");

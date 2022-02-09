@@ -180,7 +180,7 @@ String user_shop = (String) session.getAttribute("user_shop");
 									<div class="col-xl-3-frame col-md-6">
 										<form class="cctvadmin">
 											<iframe class="frame"
-												src="http://121.147.0.176:2000/"></iframe>
+												src="http://121.147.0.176:2000/motion_model"></iframe>
 										</form>
 									</div>
 								</div>

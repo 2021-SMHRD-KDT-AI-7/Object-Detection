@@ -176,51 +176,42 @@ String user_shop = (String) session.getAttribute("user_shop");
 									<i class="me-1"></i> 통합 / 개별 영상
 								</div>
 								<div class="row">
-									<!-- 1번 영상-->
 									<div class="col-xl-3-frame col-md-6">
 										<form class="cctvadmin">
 											<iframe class="frame"
-												src="http://121.147.0.176:2000/"></iframe>
-										</form>
-									</div>
-									<!-- 2번 영상-->
-									<div class="col-xl-3-frame30 col-md-6">
-										<form class="cctvadmin">
-											<iframe class="frame"
-												src="http://222.102.104.28:2000/video_feed"></iframe>
+												src="http://121.147.0.176:2000/total_model"></iframe>
 										</form>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-			</div>
-			</main>
-			<!-- 하단바 -->
-			<footer class="py-4 bg-light mt-auto">
-				<div class="container-fluid px-4">
-					<div
-						class="d-flex align-items-center justify-content-between small">
-						<div class="text-muted">Copyright &copy; Your Website 2021</div>
-						<div>
-							<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
-								&amp; Conditions</a>
+				</main>
+				<!-- 하단바 -->
+				<footer class="py-4 bg-light mt-auto">
+					<div class="container-fluid px-4">
+						<div
+							class="d-flex align-items-center justify-content-between small">
+							<div class="text-muted">Copyright &copy; Your Website 2021</div>
+							<div>
+								<a href="#">Privacy Policy</a> &middot; <a href="#">Terms
+									&amp; Conditions</a>
+							</div>
 						</div>
 					</div>
-				</div>
-			</footer>
+				</footer>
+			</div>
 		</div>
-	</div>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-		crossorigin="anonymous"></script>
-	<script src="js/scripts.js"></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
-		crossorigin="anonymous"></script>
-	<script src="js/datatables-simple-demo.js"></script>
-	<script src="./js/dataset.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+			crossorigin="anonymous"></script>
+		<script src="js/datatables-simple-demo.js"></script>
+		<script src="./js/dataset.js"></script>
 </body>
 </html>

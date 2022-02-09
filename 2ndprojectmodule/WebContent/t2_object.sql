@@ -30,5 +30,5 @@ ALTER TABLE t2_object
         REFERENCES t2_detection (detection_seq)
 /
 
-INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (1, '≤≠', 2);
+INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (1, 'øÏ¿Ø', 2);
 INSERT INTO t2_object (detection_seq, item_name, item_cnt) VALUES (2, 'ªÁ≈¡', 3);

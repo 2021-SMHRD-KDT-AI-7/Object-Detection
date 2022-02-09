@@ -1599,6 +1599,17 @@ progress {
     width: 70%;
   }
   
+   .col-xl-3-cctv1 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  
+     .col-xl-3-cctv2 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+  
+  
   .col-xl-3-frame30 {
     flex: 0 0 auto;
     width: 30%;
@@ -11715,7 +11726,12 @@ body {
 }
 
 .cctv {
-  width:75%;
+  width:100%;
+  height:50%;
+}
+
+.cctv2 {
+  width:50%;
   height:50%;
 }
 
@@ -11733,26 +11749,24 @@ body {
 	text-align: center;
 }
 .testcctv{
-  width:75%;
-  float:right;
-  display: flex;
-  align-items: center;
+  width:50%;
 }
 
 .testcctv1{
-  width:75%;
-  float:left;
-  align-items: center;
+  width:50%;
 }
 
 .cctvadmin{
 	width: 100%;
 }
 
+.cctvadmin2{
+  width:100%;
+}
+
+
 .testcctv2{
-  width:75%;
-  float:right;
-  align-items: center;
+  width:50%;
 }
 
 .admincctv1{
