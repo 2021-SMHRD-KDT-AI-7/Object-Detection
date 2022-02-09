@@ -1599,6 +1599,12 @@ progress {
     width: 70%;
   }
   
+   .col-xl-3-iframe {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 500px;
+  }
+  
    .col-xl-3-cctv1 {
     flex: 0 0 auto;
     width: 50%;
@@ -11778,11 +11784,10 @@ body {
 
 iframe{
 	width: 100%;
-	height: 100%;
 }
 
 .frame{
-	height: 300px;s
+	height: 500px;
 }
 
 .v4 {

@@ -177,7 +177,7 @@ String user_shop = (String) session.getAttribute("user_shop");
 								</div>
 								<div class="row">
 									<!-- 1번 영상-->
-									<div class="col-xl-3-frame col-md-6">
+									<div class="col-xl-3-iframe">
 										<form class="cctvadmin">
 											<iframe class="frame"
 												src="http://121.147.0.176:2000/motion_model"></iframe>
