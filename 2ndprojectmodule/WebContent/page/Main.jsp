@@ -183,7 +183,7 @@ o_list = odao.obj_show();
 										<!-- 절도 이미지 보기 (div클래스 바꾸기) -->
 									</div>
 									<div class="imgcen">
-										<img class="imgsize" src="./assets/img/juldo.jpg">
+										<img class="imgsize" src="./assets/img/qq.jpg">
 									</div>
 								</div>
 							</div>
@@ -194,7 +194,7 @@ o_list = odao.obj_show();
 										<!-- 절도범 얼굴 보기 -->
 									</div>
 									<div class="imgcen">
-										<img class="imgsize" src="./assets/img/aaa.jpg">
+										<img class="imgsize" src="./assets/img/qw.jpg">
 									</div>
 								</div>
 							</div>

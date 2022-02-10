@@ -20,7 +20,7 @@
 <body class="sb-nav-fixed">
 	<nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 		<!-- 메인 메뉴바-->
-		<a class="navbar-brand ps-3" href="index.html">모델 이름 적는곳</a>
+		<a class="navbar-brand ps-3" href="index.html">스마트인재개발원점</a>
 		<!-- 사이드 메뉴바-->
 		<button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
 			id="sidebarToggle" href="#!">

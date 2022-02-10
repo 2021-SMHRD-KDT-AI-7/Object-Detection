@@ -28,4 +28,16 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>WebContent/page/assets/img/qq.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/iloveimg-compressed/qq.jpg</locationURI>
+		</link>
+		<link>
+			<name>WebContent/page/assets/img/qw.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/iloveimg-compressed/qw.jpg</locationURI>
+		</link>
+	</linkedResources>
 </projectDescription>
